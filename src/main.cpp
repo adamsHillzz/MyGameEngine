@@ -106,7 +106,7 @@ int main(void)
 
     // vertex VBO
     glGenBuffers(2, VBOs);
-    glBindVertexArray(VAO);
+    glBindVertexArray(VAO); 
     glBindBuffer(GL_ARRAY_BUFFER, VBOs[0]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
@@ -115,7 +115,6 @@ int main(void)
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GL_FLOAT), (void*)0);
 
     // color VBO
-    glGenBuffers(2, VBOs);
     glBindBuffer(GL_ARRAY_BUFFER, VBOs[1]);
     glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
 
